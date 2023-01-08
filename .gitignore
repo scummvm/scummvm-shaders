@@ -1,3 +1,4 @@
 addon-pack-tmpdir
 upstream-temp
 shaders.dat
+shaders*.dat
