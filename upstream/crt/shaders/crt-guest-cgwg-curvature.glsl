@@ -417,7 +417,8 @@ void main()
 	color = saturation(color);
 	color*= vign(lum);
 	
-	#if defined GL_ES
+	#if 1
+	// ScummVM: Always apply the fix as we use a small texture unlike RetroArch
 	// hacky clamp fix for GLES
     	vec2 bordertest = (pos);
     		if ( bordertest.x > 0.0001 && bordertest.x < 0.9999 && bordertest.y > 0.0001 && bordertest.y < 0.9999)

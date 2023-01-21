@@ -536,7 +536,8 @@ void main()
     if (inter >0.5 && InputSize.y >400.0 && fract(iTime)<0.5) res=res*0.95; else res;
     res.rgb*= vign(lum);
 }
-#if defined GL_ES
+#if 1
+    // ScummVM: Always apply the fix as we use a small texture unlike RetroArch
     // hacky clamp fix for GLES
     vec2 bordertest = (pC4);
     if ( bordertest.x > 0.0001 && bordertest.x < 0.9999 && bordertest.y > 0.0001 && bordertest.y < 0.9999)
